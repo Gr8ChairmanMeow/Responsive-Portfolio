@@ -1,0 +1,271 @@
+/* Reset to avoid rendering issues in different browsers.*/
+* {
+	box-sizing:border-box;
+	position:relative;
+	margin:0;
+	padding:0;
+}
+
+/*Removed link decoration to make links appear as text
+in nav bar*/
+a{
+	text-decoration: none;
+	color:lightgrey;
+}
+
+/*Added hover pseudoclass to links to make them cool.*/
+a:hover {
+	color:darkgrey;
+}
+
+/*Established image positioning and modified margins and
+top to center within about container.*/
+img {
+	position: relative;
+	float: left;
+	top:5%;
+	margin:0 25px 40px 0;
+}
+
+/*Added shadow to icon links to make them 1337.*/
+.icons img:hover{
+	box-shadow: 10px 10px 5px #888888;;
+}
+
+/*Established default color and font-family for body.*/
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	background:lightgrey;
+}
+
+/*Floated elements to the right.*/
+nav,
+.contact{
+	float:right;
+}
+
+/*Added padding and margins to elements
+with similar design and changed font family
+to pretty serif font for ooohs and ahhhs.*/
+.about,
+.contact {
+	padding:20px 30px;
+	margin:50px;
+	background:white;
+	color:#4aaaa5;
+	font-weight:bolder;
+	font-family:serif;
+}
+
+/*Floated about container to the left to make room
+for the contact container and set dimensions for it.*/
+.about {
+	float:left;
+	left:10%;
+	width:500px;
+	height:500px;
+	font-size:36px;
+}
+
+/*Pushed contact container from the right to center it
+better on right side of page and established parameters
+for how elements within it will render.*/
+.contact {	
+	right:10%;
+	width:300px;
+	height:200px;
+	text-align:center;
+	font-size:24px;
+	line-height: 2.5;
+}
+
+/*Set position for javi container and established other
+attributes to get the right color and 'look'.*/
+.javi{
+	position:relative;
+	background:#4aaaa5;
+	height:100px;
+	width:200px;
+	padding-top:40px;
+	text-align:center;
+	font-weight:bolder;
+	left:10%;
+	color:white;
+	font-size:24px;
+}
+
+/*Set header dimensions to fit javi and nav elements.*/
+header{
+	background:white;
+	height:100px;
+}
+
+/*Established position of nav bar and pushed it with right
+and top attributes to better position on page.*/
+nav{
+	position:relative;
+	right:10%;
+	top:40px;
+	word-spacing:10px;
+	font-weight:bold;
+}
+
+
+/*Established footer attributes such as text-align and color
+to establish how elements within it will render.*/
+footer{
+	text-align:center;
+	height:100px;
+	background-color:darkgrey;
+	padding-top:40px;
+	font-size:12px;
+	letter-spacing: 5px;
+}
+
+/*Made line thicker to make it prettier.*/
+hr{
+	border:lightgrey solid 1px;
+}
+
+/*Gave me elemet line height to give spacing between 
+'About Me' and hr below it separating it from img.*/
+#me{
+	line-height: 2.5;
+}
+
+/*Gave different color to hr separating body and header.*/
+#top{
+	border:grey solid 1px;
+}
+
+/*Gave different color to hr separating footer and body.*/
+#hr{
+	border:#4aaaa5 solid 5px;
+}
+
+/*Gave different font color and sizing to text within
+About Me.*/
+#description{
+	color:grey;
+	font-size:16px;
+	margin-top:20px;
+}
+
+/*Positioned contact elements in container.*/
+.icons{
+	position:relative;
+	top:10%;
+	left:8%;
+}
+
+/*Clearfix class applied to elements meant to be in own
+row.*/
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/*@media set to resize and reposition elements as dimensions
+of screen change.*/
+@media screen and (min-width:900px) and (max-width: 1100px) {
+  .about{
+	width:400px;
+	height:550px;
+	left:10%;
+  }
+
+  .contact {
+    width:150px;
+    height:500px;
+    right:10%;
+  }
+
+  .icons{
+	left:25%;
+  }
+
+}
+
+@media screen and (min-width:768px) and (max-width: 900px) {
+  .about{
+	width:400px;
+	height:550px;
+	left:9%;
+  }
+
+  .contact {
+    width:150px;
+    height:500px;
+    right:9%;
+  }
+
+  .icons{
+	left:25%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+  }
+
+  .about,
+  .contact {
+    float:none;
+    margin:10px auto;
+    width:100%;
+    right:0%;
+    left:0%;
+  }
+
+  #hr_connect{
+  	margin-bottom:10px;
+  }
+
+  .icons{
+  	display:inline-block;
+  	left:2%;
+}
+
+
+@media screen and (max-width: 640px) {
+	header{
+		height:130px;
+	}
+
+	.about{
+		height:auto;
+	}
+
+	#AboutImg {
+		margin-top:20px;
+	}
+
+	nav{
+		width:100%;
+		text-align:center;
+		left:0.5%;
+		top:75%;
+		font-size:24px;
+		line-height:1.25;
+	}
+
+	.javi{
+		float:none;
+		width:100%;
+		left:0%;
+	}
+}
+
+/*Gave unique id to img in About section to avoid
+resizing other image elements such as the icons.*/
+@media screen and (max-width: 400px) {
+	#AboutImg{
+		height:150px;
+		width:150px;
+	}
+}
