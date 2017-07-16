@@ -32,6 +32,10 @@ img {
 	box-shadow: 10px 10px 5px #888888;;
 }
 
+.icons_portfo img:hover{
+	box-shadow: 10px 10px 5px #888888;;
+}
+
 /*Established default color and font-family for body.*/
 body{
 	font-family: Arial, Helvetica, sans-serif;
@@ -48,6 +52,7 @@ nav,
 with similar design and changed font family
 to pretty serif font for ooohs and ahhhs.*/
 .about,
+.Portfolio,
 .contact {
 	padding:20px 30px;
 	margin:50px;
@@ -67,6 +72,22 @@ for the contact container and set dimensions for it.*/
 	font-size:36px;
 }
 
+.Portfolio{
+	height:auto;
+	float:left;
+	left:0.5%;
+	width:800px;
+	font-size:36px;
+	margin-right:0px;
+}
+
+.Portfolio_Images{
+	position:relative;
+	text-align:center;
+	padding-left:60px;
+	padding-top:20px;
+}
+
 /*Pushed contact container from the right to center it
 better on right side of page and established parameters
 for how elements within it will render.*/
@@ -77,6 +98,11 @@ for how elements within it will render.*/
 	text-align:center;
 	font-size:24px;
 	line-height: 2.5;
+}
+
+.contact_portfo{
+	right:2%;
+	margin-left:0;
 }
 
 /*Set position for javi container and established other
@@ -158,6 +184,11 @@ About Me.*/
 	left:8%;
 }
 
+.icons_portfo{
+	left:8%;
+	top:10px;
+}
+
 /*Clearfix class applied to elements meant to be in own
 row.*/
 .clearfix:after {
@@ -166,6 +197,40 @@ row.*/
    display: block;
    height: 0;
    clear: both;
+}
+
+@media screen and (max-width: 1230px) {
+  .contact_portfo {
+    width:150px;
+    height:500px;
+    right:10%;
+  }
+
+  .icons_portfo{
+  	padding-left:15px;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+	.portfo{
+		height:200px;
+		width:200px;
+	}
+
+	.Portfolio{
+		width:600px;
+		left:8%;
+	}
+}
+
+@media screen and (max-width: 1035px) {
+	.Portfolio{
+		left:2%;
+	}
+
+	.contact_portfo{
+		margin-right:0px;
+	}
 }
 
 /*@media set to resize and reposition elements as dimensions
@@ -196,6 +261,12 @@ of screen change.*/
 	left:9%;
   }
 
+  .Portfolio{
+	width:400px;
+	height:auto;
+	left:9%;
+  }
+
   .contact {
     width:150px;
     height:500px;
@@ -206,14 +277,26 @@ of screen change.*/
 	left:25%;
   }
 
+  .Portfolio_Images{
+	left:-12%;
+  }
+
+  .portfo{
+  	height:300px;
+  	width:300px;
+  }
+
 }
 
+
+/*Portfolio and contact go full width.*/
 @media screen and (max-width: 768px) {
   section {
     width: 100%;
   }
 
   .about,
+  .Portfolio,
   .contact {
     float:none;
     margin:10px auto;
@@ -222,14 +305,43 @@ of screen change.*/
     left:0%;
   }
 
+  .contact{
+  	height:200px;
+  }
+
+  .Portfolio{
+  	z-index:-2;
+  	height:1900px;
+  	padding-right:0;
+  }
+
+/*Remember to use overflow:auto for img(s)!*/
+  .Portfolio_Images{
+  	position:relative;
+	margin-top:1%;
+	right:0%;
+	overflow:auto;
+	padding-left:25%;
+  }
+
   #hr_connect{
   	margin-bottom:10px;
   }
 
   .icons{
   	display:inline-block;
-  	left:2%;
-}
+  	left:2.2%;
+  }
+
+  .icons_portfo{
+  	display:inline-block;
+  	left:1%;
+  }
+
+  .portfo{
+  	height:300px;
+  	width:300px;
+  }
 
 
 @media screen and (max-width: 640px) {
@@ -245,13 +357,24 @@ of screen change.*/
 		margin-top:20px;
 	}
 
+	.Portfolio{
+		width:100%;
+		margin-right:0;
+		padding-right:0;
+	}
+
+	.Portfolio_Images{
+		padding-left:20%;
+	}
+
 	nav{
 		width:100%;
 		text-align:center;
-		left:0.5%;
 		top:75%;
 		font-size:24px;
 		line-height:1.25;
+		left:0;
+		padding-left:20px;
 	}
 
 	.javi{
@@ -261,11 +384,65 @@ of screen change.*/
 	}
 }
 
+@media screen and (max-width: 500px) {
+	.Portfolio_Images{
+		padding-left:10%;
+	}
+}
+
 /*Gave unique id to img in About section to avoid
 resizing other image elements such as the icons.*/
 @media screen and (max-width: 400px) {
 	#AboutImg{
 		height:150px;
 		width:150px;
+	}
+
+	nav{
+		font-size:16px;
+		line-height: 2.2;
+	}
+
+	header{
+		height:120px;
+	}
+
+	.Portfolio_Images{
+		padding-left:15%;
+	}
+
+	.Portfolio{
+		height:1400px;
+	}
+
+	.portfo{
+		height:200px;
+		width:200px;
+	}
+
+	#description{
+		font-size:12px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	#AboutImg{
+		height:100px;
+		width:100px;
+	}
+
+	.icons_portfo img{
+		height:35px;
+		width:35px;
+	}
+
+	.icons img{
+		height:35px;
+		width:35px;
+	}
+
+	.icons,
+	.icons_portfo{
+		left:5%;
 	}
 }
