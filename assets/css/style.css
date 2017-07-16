@@ -18,6 +18,14 @@ a:hover {
 	color:darkgrey;
 }
 
+form{
+	font-size:16px;
+	color:black;
+	font-family:sans-serif;
+	line-height: 1.5;
+	margin-top:10px;
+}
+
 /*Established image positioning and modified margins and
 top to center within about container.*/
 img {
@@ -252,6 +260,14 @@ of screen change.*/
 	left:25%;
   }
 
+  input{
+  	width:350px;
+  }
+
+  textarea{
+  	width:350px;
+  }
+
 }
 
 @media screen and (min-width:768px) and (max-width: 900px) {
@@ -284,6 +300,14 @@ of screen change.*/
   .portfo{
   	height:300px;
   	width:300px;
+  }
+
+  input{
+  	width:350px;
+  }
+
+  textarea{
+  	width:350px;
   }
 
 }
@@ -343,6 +367,16 @@ of screen change.*/
   	width:300px;
   }
 
+  form{
+  	padding-left:100px;
+  }
+
+  textarea{
+  	margin-left:100px;
+  }
+
+}
+
 
 @media screen and (max-width: 640px) {
 	header{
@@ -382,11 +416,43 @@ of screen change.*/
 		width:100%;
 		left:0%;
 	}
+
+	form{
+	  	padding-left:50px;
+	}
+
+	textarea{
+	  	margin-left:50px;
+	}
 }
 
 @media screen and (max-width: 500px) {
 	.Portfolio_Images{
 		padding-left:10%;
+	}
+
+	form{
+	  	padding-left:15px;
+	}
+
+	textarea{
+	  	margin-left:15px;
+	}
+}
+
+@media screen and (max-width:450px) {
+	form{
+	  	padding-left:60px;
+	}
+
+	input{
+		width:200px;
+	}
+
+	textarea{
+	  	margin-left:60px;
+	  	width:200px;
+	  	height:200px;
 	}
 }
 
@@ -423,12 +489,24 @@ resizing other image elements such as the icons.*/
 	#description{
 		font-size:12px;
 	}
+
+	form{
+	  	padding-left:30px;
+	}
+
+	textarea{
+	  	margin-left:30px;
+	}
 }
 
 @media screen and (max-width: 330px) {
 	#AboutImg{
 		height:100px;
 		width:100px;
+	}
+
+	.Portfolio_Images{
+		padding-left:10%;
 	}
 
 	.icons_portfo img{
@@ -441,8 +519,20 @@ resizing other image elements such as the icons.*/
 		width:35px;
 	}
 
-	.icons,
-	.icons_portfo{
+	.icons{
 		left:5%;
+	}
+
+
+	.icons_portfo{
+		left:15%;
+	}
+
+	form{
+	  	padding-left:10px;
+	}
+
+	textarea{
+	  	margin-left:10px;
 	}
 }
